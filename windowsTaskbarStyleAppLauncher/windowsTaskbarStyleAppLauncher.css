@@ -1,0 +1,244 @@
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 45px;
+    backdrop-filter: blur(15px);
+    padding: 5px;
+    text-align: center;
+    z-index: 1000;
+    right: 0;
+  }
+  .taskbar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+    background-color: #fff;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/59615/bg--acrylic-light.png");
+  }
+  
+  .taskbarTemp {
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    margin-left: -14px;
+    font-size: 0.6rem;
+  }
+  
+  .taskbarIcon {
+    font-size: 2rem;
+    display: inline-block;
+  }
+  
+  .taskbarTime {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+  }
+  
+  .taskbarIconWrapper {
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    vertical-align: top;
+    border-radius: 4px;
+    height: 35px;
+    bottom: 5px;
+    transition: background-color 0.2s linear;
+  }
+  .taskbarIconWrapper.active {
+    background-color: rgba(255, 255, 255, 0.17);
+  }
+  .taskbarIconWrapper.focused, .taskbarIconWrapper:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 43px;
+  }
+  
+  .taskbarIconIndicator {
+    position: absolute;
+    left: 11px;
+    width: 19px;
+    height: 3px;
+    bottom: 3px;
+    background-color: #226cb1;
+    border-radius: 25%;
+    transform-origin: center;
+    transition: transform 0.2s linear;
+  }
+  .taskbarIconIndicator.unfocused {
+    transform: scaleX(0.3);
+    background-color: #999;
+  }
+  
+  .windowsLogo {
+    background: #2ba0da;
+    background: linear-gradient(135deg, #2ba0da 0%, #3774c4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .taskbarNoteIcon {
+    color: #123fbc;
+  }
+  
+  .note {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    color: #fff;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #333;
+    font-weight: 700;
+  }
+  
+  .noteBodyText {
+    padding: 20px 60px;
+    color: #222222;
+  }
+  
+  .panel-body {
+    max-height: 468px;
+    overflow-y: scroll;
+  }
+  
+  .panel-body::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .panel-body::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .panel-body::-webkit-scrollbar-thumb {
+    background-color: rgba(1, 2, 3, 0.2);
+  }
+  
+  .lightText {
+    color: #444444;
+    font-size: 0.8rem;
+  }
+  
+  .header {
+    color: #5e6469;
+    height: 33px;
+  }
+  .header > .headerIcons {
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    text-align: right;
+    font-size: 0.8rem;
+  }
+  .header > .headerIcons > i {
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    padding: 10px;
+  }
+  .header > .headerIcons > i:hover {
+    color: #222222;
+    background-color: rgba(250, 250, 250, 0.4);
+  }
+  
+  .headerTitleIcon {
+    font-size: 1rem;
+    position: absolute;
+    margin-top: 10px;
+    color: #123fbc;
+    margin-left: 10px;
+  }
+  
+  .headerTitleText {
+    display: inline-block;
+    margin-top: -1px;
+    margin-left: 25px;
+    padding: 10px;
+  }
+  
+  .notepadIcon {
+    height: 20px;
+  }
+  
+  .headerImage {
+    background-image: url("https://www.bleepstatic.com/images/news/Microsoft/windows-11/leak/new-default-wallpaper.jpg");
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    background-position-y: -75px;
+  }
+  
+  .headerImageOverlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-shadow: 0px 0px 10px #000;
+    background-color: rgba(4, 27, 104, 0.1);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ml15 {
+    margin-left: 15px;
+  }
+  
+  .ml10 {
+    margin-left: 10px;
+  }
+  
+  .mt50 {
+    margin-top: 50px;
+  }
+  
+  .mt20 {
+    margin-top: 20px;
+  }
+  
+  .ml40 {
+    margin-left: 40px;
+  }
+  
+  .ml25 {
+    margin-left: 25px;
+  }
+  
+  .noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+       supported by Chrome, Edge, Opera and Firefox */
+  }
+  
+  .zindex0 {
+    z-index: 10;
+  }
+  
+  .zindex1 {
+    z-index: 20;
+  }
+  
+  .zindex2 {
+    z-index: 30;
+  }
+  
+  .zindex3 {
+    z-index: 40;
+  }
